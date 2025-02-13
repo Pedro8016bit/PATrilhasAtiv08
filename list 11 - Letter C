@@ -1,0 +1,25 @@
+using System;
+using System.Linq;
+
+namespace PATrilhasAtiv07
+{
+	class Program
+	{
+		static int conta(int num1 , int num2)
+		{
+			return num1 + num2;
+		}
+		public static void Main(string[] args)
+		{
+			Console.WriteLine("digite dois numeros:");
+			int num1 = int.Parse(Console.ReadLine());
+			int num2 = int.Parse(Console.ReadLine());
+			
+			conta(num1 , num2);
+			Console.WriteLine("a soma é " + conta(num1 , num2));
+				
+			Console.Write("Press any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
