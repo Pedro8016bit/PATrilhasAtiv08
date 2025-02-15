@@ -1,0 +1,36 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace Exercicios
+{
+    class Program
+    {
+
+        static int menor(List<int> num)
+        {
+            return num.Min();
+        }
+
+        public static void Main()
+        {
+            List<int> nume = new List<int>();
+
+            Console.WriteLine("Quantos números você quer colocar na lista?");
+            int quant = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= quant; i++)
+            {
+                Console.WriteLine("\nDigite o número " + i + " da lista");
+                int numero = int.Parse(Console.ReadLine());
+                nume.Add(numero);
+            }
+
+            int resultado = menor(nume);
+            Console.WriteLine("\nO menor número que você digitou é: " + resultado);
+
+			Console.Write("Press any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
