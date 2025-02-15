@@ -1,0 +1,38 @@
+using System;
+
+namespace Exercicios
+{
+    class Program
+    {
+
+        static bool priOUn(int num)
+        {
+        	if (num <= 1){
+                return false;
+        	}
+        	
+        	for ( int i = 2; i <= Math.Sqrt(num); i++){
+        		
+        		if (num % i == 0){
+                    return false;
+        		}
+        	}
+        	return true;
+        }
+
+        public static void Main()
+        {
+            
+            Console.WriteLine("Digite um numero inteiro:\n");
+            Console.WriteLine("Se for primo o console exibira 'True'");
+            int num = int.Parse(Console.ReadLine());
+            
+            bool resultado = priOUn(num);
+            
+            Console.WriteLine(resultado);
+
+			Console.Write("Press any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
